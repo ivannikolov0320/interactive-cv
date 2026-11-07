@@ -4,17 +4,15 @@ import "./App.css";
 const experience = [
   { period: "February 2025 - Present", position: "Project Manager", company: "Postbank (Eurobank Bulgaria AD)", location: "Sofia, Bulgaria", description: "Managing digital transformation and technology initiatives, coordinating cross-functional teams and supporting the delivery of high-value projects.", current: true },
   { period: "February 2023 - January 2025", position: "IT Security Project Manager", company: "DXC Technology", location: "Sofia, Bulgaria", description: "Coordinated IT security projects, stakeholders, delivery activities, risks and dependencies in an international technology environment." },
-  { period: "March 2023 - June 2023", position: "Mentee", company: "Mentor the Young", location: "Sofia, Bulgaria", description: "Participated in a professional mentoring programme focused on personal development, career growth and practical business skills." },
   { period: "August 2022 - November 2022", position: "Project Coordinator", company: "DreamShot", location: "Sofia, Bulgaria", description: "Supported project coordination, communication, task tracking and collaboration between project stakeholders." },
   { period: "February 2022 - August 2022", position: "Senior Exception Management Coordinator", company: "TTEC", location: "Sofia, Bulgaria", description: "Coordinated exception management activities, supported operational issue resolution and stakeholder communication." },
   { period: "November 2020 - February 2022", position: "Exception Management Coordinator", company: "TTEC", location: "Sofia, Bulgaria", description: "Managed operational exceptions, monitored cases and supported communication between internal teams and stakeholders." },
-  { period: "June 2020 - November 2020", position: "Salesperson", company: "Hipoland Ltd.", location: "Bulgaria", description: "Supported customers, product presentation and daily retail operations in a customer-focused environment." },
 ];
 
 const education = [
   { period: "Currently studying", programme: "AI for Digital Transformation", institution: "Athens University of Economics and Business", shortName: "AUEB", current: true },
   { period: "September 2022 - July 2023", programme: "Master's Degree in International Project Management", institution: "University of National and World Economy", shortName: "UNWE" },
-  { period: "2016 - 2020", programme: "Bachelor's Degree in Business Informatics and Communications", institution: "University of National and World Economy", shortName: "UNWE" },
+  { period: "September 2016 - July 2020", programme: "Bachelor's Degree in Business Informatics and Communications", institution: "University of National and World Economy", shortName: "UNWE" },
 ];
 
 const certificationGroups = [
@@ -61,13 +59,64 @@ const certificationGroups = [
 ];
 
 const skillGroups = [
-  { title: "Project Management", skills: ["Project Planning", "Stakeholder Management", "Risk Management", "Dependency Management", "Cross-functional Coordination", "Project Reporting"] },
+  { title: "Project Management", skills: ["Project Planning", "Business Analysis","Stakeholder Management", "Risk Management", "Dependency Management", "Cross-functional Coordination",] },
   { title: "Digital Transformation", skills: ["Digital Initiatives", "Process Improvement", "Innovation", "Business and Technology Alignment", "Change Coordination"] },
-  { title: "AI and Data", skills: ["Artificial Intelligence", "AI Automation", "Prompt Engineering", "Data Analysis", "Power BI", "Data-driven Decision-making"] },
-  { title: "Technology and Security", skills: ["IT Security Projects", "Cybersecurity Awareness", "Business Analysis", "Software Testing", "DevOps Foundations", "Technology Delivery"] },
+  { title: "AI and Data", skills: ["Artificial Intelligence", "AI Automation", "Prompt Engineering", "Data Analysis", "Power BI", "Data-driven Decision-making",  "Project Reporting"] },
+  { title: "Technology and Security", skills: ["IT Security Projects", "Cybersecurity Awareness",  "Software Testing", "DevOps Foundations", "Technology Delivery"] },
 ];
 
-const navItems = [["Home", "home"], ["About", "about"], ["Experience", "experience"], ["Education", "education"], ["Certifications", "certifications"], ["Skills", "skills"], ["Contact", "contact"]];
+const projectAwards = [
+  {
+    year: "2026",
+    award: "Best Active Banking Digital Project",
+    awardOriginal: "Best Active Banking Digital Project",
+    organization: "Bank of the Year Awards",
+    project: "EVA AI",
+    role: "Project Manager",
+    category: "Artificial Intelligence",
+    description:
+      "EVA AI is an internal AI assistant developed by Postbank for employees across the branch network, contact centre and internal teams. The project received the only award dedicated to artificial intelligence in the competition.",
+    link: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7475532373657382912/",
+    accent: "green",
+  },
+  {
+    year: "2026",
+    award: "Transform IT Awards '26",
+    awardOriginal: "Digital transformation recognition",
+    organization: "Digitalk and A1",
+    project: "LoanAdmin",
+    role: "Project Manager",
+    category: "Process Automation",
+    description:
+      "LoanAdmin transforms the processing of unstructured information by converting email-based input into a structured and automated workflow, supporting faster and more efficient operations.",
+    link: "https://digitalk.bg/business_ai/2026/03/27/4897305_transform_it_awards_26_lab_thread_poshtenska_banka/",
+    accent: "blue",
+  },
+  {
+    year: "2026",
+    award: "Audience Award",
+    awardOriginal: "Audience Award for Best Corporate Website",
+    organization: "Website of the Year",
+    project: "New Postbank Corporate Website",
+    role: "Project Manager",
+    category: "Digital Customer Experience",
+    description:
+      "The new Postbank corporate website was recognized by the public for its modern digital experience, accessible content structure and improved presentation of the bank's services.",
+    link: "https://bgweb.bg/s/winners/",
+    accent: "bronze",
+  },
+];
+
+const navItems = [
+  ["Home", "home"],
+  ["About", "about"],
+  ["Experience", "experience"],
+  ["Education", "education"],
+  ["Certifications", "certifications"],
+  ["Skills", "skills"],
+  ["Awards", "awards"],
+  ["Contact", "contact"],
+];
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -85,7 +134,6 @@ function App() {
       </header>
 
       <section className="hero" id="home">
-        <div className="heroBackdrop" aria-hidden="true"></div>
         <div className="heroContent">
           <p className="label">PROJECT MANAGER · DIGITAL TRANSFORMATION · AI</p>
           <h1 className="heroName"><span>Ivan</span><span className="middleName">K<span className="nameDot">.</span></span><span>Nikolov</span></h1>
@@ -100,7 +148,7 @@ function App() {
 
       <section className="section aboutSection" id="about">
         <div><p className="label">ABOUT ME</p><h2>Connecting strategy, technology and practical delivery.</h2></div>
-        <div className="aboutContent"><p className="largeParagraph">I am a project manager with experience in digital transformation, IT security and technology delivery.</p><p>My professional focus is on transforming complex business objectives into clear delivery plans, coordinating cross-functional teams and maintaining effective communication between business and technology stakeholders.</p><p>I am currently working as a Project Manager at Postbank and studying AI for Digital Transformation at the Athens University of Economics and Business.</p><div className="aboutFacts"><div><strong>Sofia</strong><span>Based in Bulgaria</span></div><div><strong>Project Management</strong><span>Professional focus</span></div><div><strong>Digital Transformation</strong><span>Area of expertise</span></div><div><strong>Artificial Intelligence</strong><span>Current area of study</span></div></div></div>
+        <div className="aboutContent"><p className="largeParagraph">I am a project manager with experience in digital transformation, IT security and technology delivery.</p><p>My professional focus is on transforming complex business objectives into clear delivery plans, coordinating cross-functional teams and maintaining effective communication between business and technology stakeholders.</p><p>I am currently working as a Project Manager at Postbank and studying AI for Digital Transformation at the Athens University of Economics and Business.</p><div className="aboutFacts"><div><strong>Based in Sofia,</strong><span> Bulgaria</span></div><div><strong>Project Management</strong><span>Professional focus</span></div><div><strong>Digital Transformation</strong><span>Area of expertise</span></div><div><strong>Artificial Intelligence</strong><span>Current area of study</span></div></div></div>
       </section>
 
       <section className="fullWidthSection" id="experience"><div className="section"><div className="sectionHeading"><p className="label">EXPERIENCE</p><h2>Professional journey</h2><p>Experience across banking, technology, IT security, project coordination and operations.</p></div><div className="timeline">{experience.map((item) => <article className={`experienceItem ${item.current ? "currentExperience" : ""}`} key={`${item.company}-${item.position}`}><div className="experiencePeriod"><p>{item.period}</p>{item.current && <span className="currentBadge">Current role</span>}</div><div className="experienceInformation"><h3>{item.position}</h3><p className="company">{item.company}</p><p className="location">{item.location}</p><p className="experienceDescription">{item.description}</p></div></article>)}</div></div></section>
@@ -111,7 +159,87 @@ function App() {
 
       <section className="section" id="skills"><div className="sectionHeading"><p className="label">EXPERTISE</p><h2>Skills and capabilities</h2><p>A combination of project delivery, transformation, technology and analytical capabilities.</p></div><div className="skillGroups">{skillGroups.map((group) => <article className="skillGroup" key={group.title}><h3>{group.title}</h3><div className="skillsList">{group.skills.map((skill) => <span className="skill" key={skill}>{skill}</span>)}</div></article>)}</div></section>
 
-      <section className="contactSection" id="contact"><div className="contactContent"><p className="label">CONTACT</p><h2>Let&apos;s create meaningful impact.</h2><p>Connect with me to discuss project management, digital transformation, technology and AI initiatives.</p><div className="heroButtons contactButtons"><a className="button primary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">View LinkedIn</a><a className="button secondary" href="mailto:ivan.krasenov.nikolov@gmail.com">Send email</a></div></div></section>
+<section className="fullWidthSection awardsSection" id="awards">
+  <div className="section">
+    <div className="sectionHeading awardsHeading">
+      <div>
+        <p className="label">PROJECT AWARDS AND RECOGNITION</p>
+
+        <h2>Recognition for projects delivered with impact.</h2>
+      </div>
+
+      <p className="awardsSummary">
+        Selected distinctions received by projects that I led as Project
+        Manager at Postbank.
+      </p>
+    </div>
+
+    <div className="awardsGrid">
+      {projectAwards.map((item, index) => (
+        <article
+          className={`awardCard awardAccent-${item.accent}`}
+          key={`${item.project}-${item.award}`}
+        >
+          <div className="awardTop">
+            <span className="awardNumber">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+
+            <span className="awardYear">{item.year}</span>
+          </div>
+
+          <div className="awardSymbol" aria-hidden="true">
+            <span></span>
+          </div>
+
+          <p className="awardCategory">{item.category}</p>
+
+          <h3>{item.award}</h3>
+
+          <p className="awardOriginal">{item.awardOriginal}</p>
+
+          <div className="recognizedProject">
+            <span>Recognized project</span>
+            <strong>{item.project}</strong>
+          </div>
+
+          <p className="awardDescription">{item.description}</p>
+
+          <div className="awardDetails">
+            <div>
+              <span>Awarded by</span>
+              <strong>{item.organization}</strong>
+            </div>
+
+            <div>
+              <span>My role</span>
+              <strong>{item.role}</strong>
+            </div>
+          </div>
+
+          <a
+            className="awardLink"
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`View public information about ${item.award} for ${item.project}`}
+          >
+            View public recognition
+            <span aria-hidden="true">↗</span>
+          </a>
+        </article>
+      ))}
+    </div>
+
+    <p className="awardsDisclaimer">
+      The distinctions were awarded to the respective projects and
+      organizations. My contribution was as Project Manager responsible for
+      coordinating their delivery.
+    </p>
+  </div>
+</section>
+
+      <section className="contactSection" id="contact"><div className="contactContent"><p className="label">CONTACT</p><h2>Let&apos;s create meaningful impact.</h2><p>Connect with me to discuss project management, digital transformation, technology and AI initiatives.</p><div className="heroButtons contactButtons"><a className="button primary" href="https://www.linkedin.com/in/ivan-nikolov-safe%C2%AE-12249b1b5/" target="_blank" rel="noreferrer">View LinkedIn</a><a className="button secondary" href="mailto:ivan.krasenov.nikolov@gmail.com">Send email</a></div></div></section>
 
       <footer className="footer"><div className="footerIdentity"><a className="footerLogo" href="#home" aria-label="Back to top"><span>IKN</span><b>.</b></a><p>© {new Date().getFullYear()} Ivan K. Nikolov</p></div><a className="backToTop" href="#home">Back to top ↑</a></footer>
     </main>
